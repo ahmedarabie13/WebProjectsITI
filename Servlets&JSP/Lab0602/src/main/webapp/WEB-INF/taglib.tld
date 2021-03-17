@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+
+	<tlibversion>1.0</tlibversion>
+	<shortname>Mytags</shortname>
+	<uri>/WEB-INF/taglib.tld</uri>
+	<tag>
+		<name>double</name>
+		<tagclass>com.arabie.tags.DoublerTag</tagclass>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>number</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>int</type>
+		</attribute>
+
+	</tag>
+</taglib>

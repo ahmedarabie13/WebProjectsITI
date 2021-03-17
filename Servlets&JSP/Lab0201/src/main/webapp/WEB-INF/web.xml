@@ -1,0 +1,28 @@
+
+<web-app xmlns= "https://jakarta.ee/xml/ns/jakartaee"
+xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation= "https://jakarta.ee/xml/ns/jakartaee
+https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+version= "5.0"
+metadata-complete= "true">
+	<context-param>
+		<param-name>DollarExchangeRate</param-name>
+		<param-value>17.5</param-value>
+	</context-param>
+	<servlet>
+		<servlet-name>MyServletSetter</servlet-name>
+		<servlet-class>com.arabie.SetterServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>MyServletGetter</servlet-name>
+		<servlet-class>com.arabie.GetterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MyServletSetter</servlet-name>
+		<url-pattern>/MyServletSetterUrl</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MyServletGetter</servlet-name>
+		<url-pattern>/MyServletGetterUrl</url-pattern>
+	</servlet-mapping>
+</web-app>

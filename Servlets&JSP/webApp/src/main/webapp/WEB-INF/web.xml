@@ -1,0 +1,28 @@
+
+<web-app xmlns= "https://jakarta.ee/xml/ns/jakartaee"
+xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation= "https://jakarta.ee/xml/ns/jakartaee
+https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+version= "5.0"
+metadata-complete= "true">
+	<servlet>
+		<servlet-name>Testing</servlet-name>
+		<servlet-class>com.arabie.Main</servlet-class>
+		<init-param>
+	        <param-name>DatabaseAddress </param-name>
+	        <param-value>163.121.12.25</param-value>
+	    </init-param>
+	    <init-param>
+	        <param-name>userName</param-name>
+	        <param-value>arabie</param-value>
+	    </init-param>
+	    <init-param>
+	        <param-name>password</param-name>
+	        <param-value>arabie</param-value>
+	    </init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Testing</servlet-name>
+		<url-pattern>/MyTest</url-pattern>
+	</servlet-mapping>
+</web-app>

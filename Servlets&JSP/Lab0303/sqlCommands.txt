@@ -1,0 +1,10 @@
+select * from user;
+
+update user 
+set first_name='arabie'
+where user_name='a';
+
+insert into user(first_name,last_name,user_name,password)
+values ('b','b','b','b');
+
+delete from user where first_name='b';

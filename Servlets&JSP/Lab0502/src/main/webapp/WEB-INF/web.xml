@@ -1,0 +1,45 @@
+<web-app xmlns= "https://jakarta.ee/xml/ns/jakartaee"
+xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation= "https://jakarta.ee/xml/ns/jakartaee
+https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+version= "5.0"
+metadata-complete= "true">
+	<servlet>
+		<servlet-name>StartUpServlet</servlet-name>
+		<servlet-class>com.arabie.StartUp</servlet-class>
+		 <load-on-startup>1</load-on-startup>
+		<!-- load on deploy -->
+	</servlet>
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.arabie.Login</servlet-class>
+		<!-- <load-on-startup>1</load-on-startup> -->
+		<!-- load on deploy -->
+	</servlet>
+	<servlet>
+		<servlet-name>SearchServlet</servlet-name>
+		<servlet-class>com.arabie.Search</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>com.arabie.Register</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServletUrl</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SearchServlet</servlet-name>
+		<url-pattern>/SearchServletUrl</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/RegisterServletUrl</url-pattern>
+	</servlet-mapping>
+	<resource-ref>
+		<description>DB Connection</description>
+		<res-ref-name>jdbc/TestDB</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+</web-app>
